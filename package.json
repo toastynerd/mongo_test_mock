@@ -1,0 +1,32 @@
+{
+  "name": "mongo_test_mock",
+  "version": "0.1.0",
+  "description": "a test helper for MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/**/*test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toastynerd/mongo_test_mock.git"
+  },
+  "keywords": [
+    "mongodb",
+    "test",
+    "mock"
+  ],
+  "author": "Tyler Morgan <tyler@codefellows.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toastynerd/mongo_test_mock/issues"
+  },
+  "homepage": "https://github.com/toastynerd/mongo_test_mock",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "mongodb": "^2.0.37"
+  },
+  "dependencies": {
+    "bson": "^0.4.8"
+  }
+}
