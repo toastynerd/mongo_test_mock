@@ -4,7 +4,8 @@
   "description": "a test helper for MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/**/*test.js"
+    "test": "./node_modules/mocha/bin/mocha test/**/*test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
