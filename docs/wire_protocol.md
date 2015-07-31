@@ -9,13 +9,14 @@
 | 12       |4 bytes  | Op Code (int)       |
 
 ** Query
-|offset dec           | size              |      purpose         |
-| 16                  | 4 bytes           | flags                |
-| 20                  | csrting (variable)|  db.collectionName   |
-| 20 + cstring size   | 4 bytes           | number to skip       |
-| 24 + cstring size   | 4 bytes           | number to return     |
-| 28 + cstring size   | document          | query object         |
-| optional            | document          | return field selector|
+|offset dec             | size              |      purpose         |
+|-----------------------|-------------------|----------------------|
+| 16                    | 4 bytes           | flags                |
+| 20                    | csrting (variable)|  db.collectionName   |
+| 20 + cstring size     | 4 bytes           | number to skip       |
+| 24 + cstring size     | 4 bytes           | number to return     |
+| 29 + cstring size     | document          | query object         |
+| 28 + cs size + qo size| document          | return field selector|
 
 
 ** Reply
