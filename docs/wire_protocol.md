@@ -1,6 +1,7 @@
-* MongoDB wire protocol unnoficial doc
+# MongoDB wire protocol unnoficial doc
 
-** MsgHeader
+## MsgHeader
+
 |offset dec| size    |      purpose        |
 |----------|---------|---------------------|
 | 0        |4 bytes  |Size of Message(int) |
@@ -8,7 +9,8 @@
 | 8        |4 bytes  |response ID (int)    |
 | 12       |4 bytes  | Op Code (int)       |
 
-** Query
+## Query
+
 |offset dec             | size              |      purpose         |
 |-----------------------|-------------------|----------------------|
 | 16                    | 4 bytes           | flags                |
@@ -19,7 +21,8 @@
 | 28 + cs size + qo size| document          | return field selector|
 
 
-** Reply
+## Reply
+
 |offset dec| size    |      purpose        |
 | 16       | 4 bytes |response flags       |
 | 20       | 8 bytes | cursor id           |
@@ -28,7 +31,7 @@
 | 32       | the rest| documents           |
 
 
-* example request/response
+# example request/response
 client request:
 ```
 ```
