@@ -24,6 +24,7 @@
 ## Reply
 
 |offset dec| size    |      purpose        |
+|----------|---------|---------------------|
 | 16       | 4 bytes |response flags       |
 | 20       | 8 bytes | cursor id           |
 | 24       | 4 bytes |cursor position      |
