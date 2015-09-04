@@ -5,8 +5,13 @@ var bson = new BSON();
 
 var socket = net.createConnection(27017);
 socket.on('data', function(data) {
-  console.log(bson.deserialize(data.slice(36, 194)));
-  console.log(data.toString('hex', 36, 194));
+  var size = data.readUInt32LE(0);
+  console.log('size: ' + size);
+  console.log('response flags: '  + data.readUInt32LE(16));
+  console.log('cursor: ' + ((data.readUInt32LE(20) << 8) + data.readUInt32LE(24)));
+  console.log('position: ' + data.readUInt32LE(28));
+  console.log('number of docs: ' + data.readUInt32LE(32));
+  console.log(bson.deserialize(data.slice(36, size)));
 });
 
 socket.on('end', function() {
