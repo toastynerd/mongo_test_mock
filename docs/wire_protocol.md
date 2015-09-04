@@ -26,10 +26,10 @@
 |offset dec| size    |      purpose        |
 |----------|---------|---------------------|
 | 16       | 4 bytes |response flags       |
-| 20       | 8 bytes | cursor id           |
-| 24       | 4 bytes |cursor position      |
-| 28       | 4 bytes | number of docs      |
-| 32       | the rest| documents           |
+| 20       | 8 bytes |cursor id            |
+| 28       | 4 bytes |cursor position      |
+| 32       | 4 bytes |number of docs       |
+| 36       | the rest|documents            |
 
 
 # example request/response
